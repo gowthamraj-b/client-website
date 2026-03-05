@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Seiva Robotics & Technologies - Leading IoT, Robotics, and Automation training provider for schools, colleges, and engineering institutions. MSME registered startup delivering Industry 4.0 education across India.">
+    <meta name="keywords"
+        content="robotics training, IoT solutions, automation, STEM education, robotics courses, engineering training, Industry 4.0, Seiva Robotics">
+    <title>Seiva Robotics & Technologies | IoT & Robotics Training for Schools & Colleges</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="nav-logo">
+                <div class="logo-glow-wrapper">
+                    <img src="logo.png" alt="Seiva Robotics Logo" class="nav-logo-img">
+                </div>
+                <span>Seiva Robotics &amp; Technologies</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#internship">Internship</a></li>
+                <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+            </ul>
+            <div class="nav-right-group">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Light/Dark Theme">
+                    <span class="theme-icon-dark">🌙</span>
+                    <span class="theme-icon-light">☀️</span>
+                </button>
+                <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="menu-btn-bar"></span>
+                    <span class="menu-btn-bar"></span>
+                    <span class="menu-btn-bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== FULL-SCREEN MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="mobile-menu-inner">
+
+            <!-- Decorative blobs -->
+            <div class="mm-blob mm-blob-1"></div>
+            <div class="mm-blob mm-blob-2"></div>
+
+            <!-- Close button -->
+            <button class="mm-close" id="mmClose" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+
+            <!-- Brand -->
+            <div class="mm-brand">
+                <img src="logo.png" alt="Seiva Robotics" class="mm-logo">
+                <span>Seiva Robotics &amp; Technologies</span>
+            </div>
+
+            <!-- Nav Links -->
+            <nav class="mm-nav" aria-label="Mobile Navigation">
+                <a href="#home" class="mm-link" data-i="1"><span class="mm-num">01</span>Home</a>
+                <a href="#about" class="mm-link" data-i="2"><span class="mm-num">02</span>About</a>
+                <a href="#vision" class="mm-link" data-i="3"><span class="mm-num">03</span>Vision</a>
+                <a href="#services" class="mm-link" data-i="4"><span class="mm-num">04</span>Services</a>
+                <a href="#courses" class="mm-link" data-i="5"><span class="mm-num">05</span>Courses</a>
+                <a href="#projects" class="mm-link" data-i="6"><span class="mm-num">06</span>Projects</a>
+                <a href="#internship" class="mm-link" data-i="7"><span class="mm-num">07</span>Internship</a>
+            </nav>
+
+            <!-- CTA -->
+            <div class="mm-cta">
+                <a href="#contact" class="mm-cta-btn mm-link" data-i="8">Get in Touch →</a>
+            </div>
+
+            <!-- Footer info -->
+            <div class="mm-footer">
+                <a href="tel:+919342261511">📞 +91 93422 61511</a>
+                <a href="mailto:seivaroboticstechnologies@gmail.com">✉️ Email Us</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="hero-bg.png" alt="Robotics training laboratory">
+        </div>
+        <div class="hero-overlay"></div>
+        <canvas id="particles-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                MSME Registered Startup
+            </div>
+            <h1>
+                Transforming Ideas into<br>
+                <span class="highlight">Intelligent Technology</span> Solutions
+            </h1>
+            <p class="hero-desc">
+                We deliver hands-on IoT, Robotics & Automation training programs for schools, colleges,
+                and engineering institutions — empowering the next generation of innovators across India.
+            </p>
+            <div class="hero-tags">
+                <span class="tag">🤖 IoT & Robotics</span>
+                <span class="tag">⚙️ Automation</span>
+                <span class="tag">🔬 R&D</span>
+                <span class="tag">🎓 STEM Education</span>
+                <span class="tag">🏭 Industry 4.0</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="#courses" class="btn btn-primary">
+                    Explore Our Courses →
+                </a>
+                <a href="#internship" class="btn btn-outline">
+                    Apply for Internship →
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="number" data-target="50">0+</div>
+                    <div class="label">Schools & Colleges</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="number" data-target="2000">0+</div>
+                    <div class="label">Students Trained</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="number" data-target="15">0+</div>
+                    <div class="label">Training Programs</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="number" data-target="10">0+</div>
+                    <div class="label">Projects Built</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal-left">
+                    <img src="training-classroom.png" alt="Robotics training classroom with students">
+                    <div class="about-image-overlay"></div>
+                </div>
+                <div class="about-text reveal-right">
+                    <span class="section-label">About Us</span>
+                    <h2 class="section-title">Robotics Education Across India</h2>
+                    <p>
+                        <strong>Seiva Robotics & Technologies</strong> is an emerging technology startup focused on
+                        Internet of Things (IoT), Robotics, Automation, and Research & Development. We are committed
+                        to bridging the gap between academic knowledge and real-world industrial applications through
+                        practical and innovation-driven learning.
+                    </p>
+                    <p>
+                        Our startup is built with a vision to empower students, institutions, and industries by
+                        providing hands-on technology training and smart automation solutions. We travel across
+                        schools and colleges, bringing cutting-edge robotics education directly to students.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <span class="icon">🏫</span>
+                            School Programs
+                        </div>
+                        <div class="about-feature">
+                            <span class="icon">🎓</span>
+                            College Workshops
+                        </div>
+                        <div class="about-feature">
+                            <span class="icon">🏭</span>
+                            Industry Training
+                        </div>
+                        <div class="about-feature">
+                            <span class="icon">🔧</span>
+                            Hands-on Learning
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VISION & MISSION ===== -->
+    <section class="section vision" id="vision">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;" class="reveal">
+                <span class="section-label">Our Direction</span>
+                <h2 class="section-title">Vision & Mission</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">
+                    Driving India towards technological excellence through innovation and education.
+                </p>
+            </div>
+            <div class="vision-grid">
+                <div class="vision-card reveal-left">
+                    <div class="card-icon">🔭</div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To become a recognized IoT & Robotics innovation startup contributing to India's
+                        technology advancement and Industry 4.0 transformation. We envision a future where
+                        every student has access to world-class robotics education.
+                    </p>
+                </div>
+                <div class="vision-card reveal-right">
+                    <div class="card-icon">🎯</div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        To provide practical, industry-aligned robotics and automation training that prepares
+                        future-ready engineers and innovators. We bring technology education to doorsteps of
+                        schools and colleges across the nation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;" class="reveal">
+                <span class="section-label">What We Offer</span>
+                <h2 class="section-title">Our Focus Areas</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">
+                    Comprehensive technology solutions from education to industrial automation.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">🤖</div>
+                    <h3>Robotics Training</h3>
+                    <p>Hands-on robotics education for school and engineering students with real-world project building.
+                    </p>
+                    <ul class="service-list">
+                        <li>Arduino & Microcontroller Programming</li>
+                        <li>Robot Design & Assembly</li>
+                        <li>Line Followers & Obstacle Avoidance</li>
+                        <li>Humanoid Robot Development</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">📡</div>
+                    <h3>IoT Solutions</h3>
+                    <p>Smart connected device development and automation solutions for modern applications.</p>
+                    <ul class="service-list">
+                        <li>Sensor Integration & Data Collection</li>
+                        <li>Smart Home Automation</li>
+                        <li>Cloud-Connected Devices</li>
+                        <li>Real-time Monitoring Systems</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Industrial Automation</h3>
+                    <p>Industry-oriented automation and embedded systems training aligned with Industry 4.0.</p>
+                    <ul class="service-list">
+                        <li>PLC & SCADA Training</li>
+                        <li>Embedded Systems Development</li>
+                        <li>Process Automation</li>
+                        <li>Industrial IoT Solutions</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🔬</div>
+                    <h3>Research & Development</h3>
+                    <p>Innovation-driven product development and prototype building for new technologies.</p>
+                    <ul class="service-list">
+                        <li>Project Prototype Building</li>
+                        <li>Custom Robot Design</li>
+                        <li>Research Paper Support</li>
+                        <li>Innovation Lab Setup</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🎓</div>
+                    <h3>STEM Education</h3>
+                    <p>Complete STEM programs tailored for schools and colleges with certification.</p>
+                    <ul class="service-list">
+                        <li>School STEM Workshops</li>
+                        <li>College Technical Fests</li>
+                        <li>Science Exhibition Support</li>
+                        <li>Faculty Training Programs</li>
+                    </ul>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🤝</div>
+                    <h3>Contract Training</h3>
+                    <p>Customized training contracts for institutions wanting long-term robotics education programs.</p>
+                    <ul class="service-list">
+                        <li>On-campus Training Programs</li>
+                        <li>Annual Technology Partnerships</li>
+                        <li>Lab Setup & Equipment</li>
+                        <li>Certification Programs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COURSES / TRAINING ===== -->
+    <section class="section courses" id="courses">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;" class="reveal">
+                <span class="section-label">Training Programs</span>
+                <h2 class="section-title">Our Courses for Schools & Colleges</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">
+                    We bring cutting-edge robotics and technology training directly to your institution.
+                </p>
+            </div>
+            <div class="courses-layout">
+                <div class="courses-image reveal-left">
+                    <img src="iot-solutions.png" alt="IoT and robotics training equipment">
+                    <div class="courses-image-badge">
+                        <span>🏆</span> Industry-Certified Programs
+                    </div>
+                </div>
+                <div class="course-list-items reveal-right">
+                    <div class="course-item">
+                        <span class="course-number">01</span>
+                        <div>
+                            <h4>Basic Robotics for Schools</h4>
+                            <p>Introduction to robotics, circuits, sensors, and basic programming for school students
+                                (Classes 6-12). Fun, project-based learning approach.</p>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <span class="course-number">02</span>
+                        <div>
+                            <h4>Advanced IoT & Embedded Systems</h4>
+                            <p>Arduino, ESP32, sensor integration, and cloud-connected IoT projects for engineering
+                                college students with hands-on labs.</p>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <span class="course-number">03</span>
+                        <div>
+                            <h4>Industrial Automation Workshop</h4>
+                            <p>PLC programming, SCADA systems, and Industry 4.0 concepts for final year engineering
+                                students and working professionals.</p>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <span class="course-number">04</span>
+                        <div>
+                            <h4>AI & Robot Design Bootcamp</h4>
+                            <p>Comprehensive 2-week intensive program covering robot design, AI integration, computer
+                                vision, and autonomous navigation.</p>
+                        </div>
+                    </div>
+                    <div class="course-item">
+                        <span class="course-number">05</span>
+                        <div>
+                            <h4>Custom Training Partnerships</h4>
+                            <p>Tailored annual programs for institutions — we set up robotics labs, provide equipment,
+                                curriculum, and ongoing instructor support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;" class="reveal">
+                <span class="section-label">Our Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">
+                    Real-world robots and systems built by our team and trained students.
+                </p>
+            </div>
+            <!-- Row 1 -->
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <img src="robot1.jpg" alt="Welcome and serving robot">
+                    <div class="project-overlay">
+                        <span class="project-tag">Hospitality Robotics</span>
+                        <h3>Welcome & Serving Robot</h3>
+                        <p>AI-powered humanoid robot designed for hotels and restaurants — greets guests, takes orders,
+                            and serves food autonomously.</p>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <img src="robot2.jpg" alt="Welcome and serving robot variant">
+                    <div class="project-overlay">
+                        <span class="project-tag">Hospitality Robotics</span>
+                        <h3>Welcome & Serving Robot</h3>
+                        <p>Custom-built serving robot with intelligent navigation and interactive display for guest
+                            engagement.</p>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <img src="robot3.jpg" alt="Mars rover prototype">
+                    <div class="project-overlay">
+                        <span class="project-tag">Space Robotics</span>
+                        <h3>Mars Rover Prototype</h3>
+                        <p>All-terrain rover with solar panels, robotic arm, and camera modules — designed for planetary
+                            exploration simulations.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 2 -->
+            <div class="projects-grid" style="margin-top: 24px;">
+                <div class="project-card reveal">
+                    <img src="robot4.jpg" alt="Autonomous robot">
+                    <div class="project-overlay">
+                        <span class="project-tag">Autonomous Navigation</span>
+                        <h3>Autonomous Robot</h3>
+                        <p>Self-navigating robot equipped with sensors, cameras, and AI — capable of mapping
+                            environments and avoiding obstacles.</p>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <img src="robot5.jpg" alt="Autonomous robot advanced">
+                    <div class="project-overlay">
+                        <span class="project-tag">Autonomous Navigation</span>
+                        <h3>Autonomous Robot</h3>
+                        <p>Advanced autonomous robot platform with multi-sensor fusion for real-world navigation
+                            applications.</p>
+                    </div>
+                </div>
+                <div class="project-card reveal">
+                    <video autoplay muted loop playsinline>
+                        <source src="project1.mp4" type="video/mp4">
+                    </video>
+                    <div class="project-overlay">
+                        <span class="project-tag">🎥 Video Demo</span>
+                        <h3>Welcome Robot in Action</h3>
+                        <p>Watch our welcome and serving robot in action — demonstrating autonomous guest interaction
+                            and food delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RECOGNITION ===== -->
+    <section class="section recognition" id="recognition">
+        <div class="container">
+            <div class="recognition-card reveal">
+                <div class="badge-icon">🏛️</div>
+                <h3>Government of India — <span class="gradient-text">MSME Registered</span></h3>
+                <p>
+                    Seiva Robotics & Technologies is a registered Micro, Small & Medium Enterprise (MSME) under
+                    the Government of India, supporting innovation, skill development, and industrial technology
+                    solutions for Bharat's technological future.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INTERNSHIP ===== -->
+    <section class="section internship" id="internship">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;" class="reveal">
+                <span class="section-label">Join Our Team</span>
+                <h2 class="section-title">Internship Programme</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">
+                    Gain real-world experience in Robotics, IoT &amp; Automation. Apply now and kickstart your tech
+                    career.
+                </p>
+            </div>
+
+            <div class="internship-layout">
+
+                <!-- Benefits Side -->
+                <div class="internship-info reveal-left">
+                    <div class="intern-highlight-card">
+                        <div class="intern-highlight-icon">🚀</div>
+                        <h4>Why Intern With Us?</h4>
+                        <p>Work on live robotics projects, learn industry-grade tools, and earn a verified certificate.
+                        </p>
+                    </div>
+                    <div class="intern-perks">
+                        <div class="intern-perk">
+                            <span class="perk-icon">🤖</span>
+                            <div>
+                                <strong>Hands-on Projects</strong>
+                                <p>Build real robots and IoT systems that go live.</p>
+                            </div>
+                        </div>
+                        <div class="intern-perk">
+                            <span class="perk-icon">📜</span>
+                            <div>
+                                <strong>Verified Certificate</strong>
+                                <p>Industry-recognized certification on completion.</p>
+                            </div>
+                        </div>
+                        <div class="intern-perk">
+                            <span class="perk-icon">🧑‍🏫</span>
+                            <div>
+                                <strong>Expert Mentorship</strong>
+                                <p>1-on-1 guidance from experienced engineers.</p>
+                            </div>
+                        </div>
+                        <div class="intern-perk">
+                            <span class="perk-icon">💼</span>
+                            <div>
+                                <strong>Stipend &amp; Letter</strong>
+                                <p>Performance-based stipend + offer letter support.</p>
+                            </div>
+                        </div>
+                        <div class="intern-perk">
+                            <span class="perk-icon">🌐</span>
+                            <div>
+                                <strong>Remote &amp; On-site</strong>
+                                <p>Flexible offline and online internship modes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Quick stats -->
+                    <div class="intern-stats">
+                        <div class="intern-stat">
+                            <span class="i-num">4–12</span>
+                            <span class="i-label">Weeks Duration</span>
+                        </div>
+                        <div class="intern-stat">
+                            <span class="i-num">5+</span>
+                            <span class="i-label">Domains Available</span>
+                        </div>
+                        <div class="intern-stat">
+                            <span class="i-num">100%</span>
+                            <span class="i-label">Project-Based</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Registration Form -->
+                <form class="internship-form reveal-right" id="internshipForm">
+                    <div class="intern-form-header">
+                        <span class="intern-badge">🎓 Apply Now — Free Enquiry</span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="iname">Full Name</label>
+                            <input type="text" id="iname" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="iemail">Email Address</label>
+                            <input type="email" id="iemail" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="iphone">Phone Number</label>
+                            <input type="tel" id="iphone" placeholder="+91 XXXXX XXXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="icollege">College / Institution</label>
+                            <input type="text" id="icollege" placeholder="Your college name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ibranch">Branch / Department</label>
+                            <input type="text" id="ibranch" placeholder="e.g. ECE, CSE, Mech" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="iyear">Current Year</label>
+                            <select id="iyear" required>
+                                <option value="" disabled selected>Select year</option>
+                                <option value="1st Year">1st Year</option>
+                                <option value="2nd Year">2nd Year</option>
+                                <option value="3rd Year">3rd Year</option>
+                                <option value="4th Year">4th Year</option>
+                                <option value="PG / Masters">PG / Masters</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="idomain">Internship Domain</label>
+                            <select id="idomain" required>
+                                <option value="" disabled selected>Choose domain</option>
+                                <option value="Robotics & Automation">Robotics &amp; Automation</option>
+                                <option value="IoT Development">IoT Development</option>
+                                <option value="Embedded Systems">Embedded Systems</option>
+                                <option value="AI & Computer Vision">AI &amp; Computer Vision</option>
+                                <option value="Industrial Automation">Industrial Automation</option>
+                                <option value="Research & Development">Research &amp; Development</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="iduration">Preferred Duration</label>
+                            <select id="iduration" required>
+                                <option value="" disabled selected>Select duration</option>
+                                <option value="4 Weeks">4 Weeks</option>
+                                <option value="6 Weeks">6 Weeks</option>
+                                <option value="8 Weeks">8 Weeks</option>
+                                <option value="12 Weeks">12 Weeks</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="imessage">Tell us about yourself &amp; your goals</label>
+                        <textarea id="imessage"
+                            placeholder="Share your skills, interests, and what you hope to achieve during the internship..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit" id="internshipSubmit">
+                        Submit Application →
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VALUES ===== -->
+    <section class="section values" id="values">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;" class="reveal">
+                <span class="section-label">What Drives Us</span>
+                <h2 class="section-title">Our Core Values</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card reveal">
+                    <div class="value-icon">💡</div>
+                    <h3>Innovation</h3>
+                    <p>Encouraging creative problem-solving and advanced technology use in every project we undertake.
+                    </p>
+                </div>
+                <div class="value-card reveal">
+                    <div class="value-icon">🔧</div>
+                    <h3>Practical Learning</h3>
+                    <p>Focused on hands-on, project-based training approach that builds real-world engineering skills.
+                    </p>
+                </div>
+                <div class="value-card reveal">
+                    <div class="value-icon">🤝</div>
+                    <h3>Integrity</h3>
+                    <p>Transparent and ethical professional practices in all our partnerships with institutions.</p>
+                </div>
+                <div class="value-card reveal">
+                    <div class="value-icon">🏆</div>
+                    <h3>Excellence</h3>
+                    <p>Commitment to quality and continuous improvement in training delivery and project outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;" class="reveal">
+                <span class="section-label">Get in Touch</span>
+                <h2 class="section-title">Book a Training Session</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">
+                    Bring robotics education to your school or college. Let's collaborate!
+                </p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <div class="contact-info-card">
+                        <div class="info-icon">📧</div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p><a
+                                    href="mailto:seivaroboticstechnologies@gmail.com">seivaroboticstechnologies@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+919342261511">+91 93422 61511</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="info-icon">💬</div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/919342261511?text=Hello%20Seiva%20Robotics%20%26%20Technologies!%20I'm%20interested%20in%20your%20training%20programs."
+                                    target="_blank">Chat with us on WhatsApp</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="info-icon">🏢</div>
+                        <div>
+                            <h4>We Come to You</h4>
+                            <p>We travel to schools and colleges across India for on-campus training programs and
+                                workshops.</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form reveal-right" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="institution">Institution Type</label>
+                            <select id="institution" required>
+                                <option value="" disabled selected>Select type</option>
+                                <option value="school">School (K-12)</option>
+                                <option value="college">Engineering College</option>
+                                <option value="university">University</option>
+                                <option value="polytechnic">Polytechnic / ITI</option>
+                                <option value="corporate">Corporate / Industry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell us about your requirements</label>
+                        <textarea id="message"
+                            placeholder="Describe what kind of training you need, number of students, preferred dates, etc."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        Send Enquiry →
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-logo">
+                        <div class="logo-glow-wrapper">
+                            <img src="logo.png" alt="Seiva Robotics Logo" class="nav-logo-img">
+                        </div>
+                        <span>Seiva Robotics &amp; Technologies</span>
+                    </a>
+                    <p>
+                        Empowering the next generation of engineers and innovators through hands-on
+                        robotics and IoT training across India.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/919342261511" target="_blank" title="WhatsApp">💬</a>
+                        <a href="tel:+919342261511" title="Call Us">📞</a>
+                        <a href="mailto:seivaroboticstechnologies@gmail.com" title="Email">📧</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="#services">Robotics Training</a>
+                    <a href="#services">IoT Solutions</a>
+                    <a href="#services">Industrial Automation</a>
+                    <a href="#services">R&D Projects</a>
+                    <a href="#services">STEM Education</a>
+                    <a href="#services">Contract Training</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <a href="mailto:seivaroboticstechnologies@gmail.com">seivaroboticstechnologies@gmail.com</a>
+                    <a href="tel:+919342261511">+91 93422 61511</a>
+                    <a href="#recognition">MSME Registered</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Seiva Robotics & Technologies. All Rights Reserved.</span>
+                <span>IoT & Robotics | Automation | R&D | STEM Education</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING ACTION BUTTONS ===== -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/919342261511?text=Hello%20Seiva%20Robotics%20%26%20Technologies!%20I'm%20interested%20in%20your%20robotics%20training%20programs.%20Can%20you%20share%20more%20details?"
+            class="fab fab-whatsapp" target="_blank" title="Chat on WhatsApp" id="fab-whatsapp">
+            <span class="fab-tooltip">Chat on WhatsApp</span>
+            💬
+        </a>
+        <a href="tel:+919342261511" class="fab fab-phone" title="Call Us" id="fab-phone">
+            <span class="fab-tooltip">Call +91 93422 61511</span>
+            📞
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
