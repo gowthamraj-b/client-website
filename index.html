@@ -5,13 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Seiva Robotics & Technologies - Leading IoT, Robotics, and Automation training provider for schools, colleges, and engineering institutions. MSME registered startup delivering Industry 4.0 education across India.">
+        content="Seiva Robotics & Technologies - India's leading IoT, Robotics, and Automation training provider. MSME registered startup delivering Industry 4.0 STEM education for schools and engineering colleges.">
     <meta name="keywords"
-        content="robotics training, IoT solutions, automation, STEM education, robotics courses, engineering training, Industry 4.0, Seiva Robotics">
+        content="robotics training India, IoT solutions, industrial automation courses, STEM education schools, engineering workshops, Industry 4.0 training, Seiva Robotics, autonomous robots development">
+    <meta name="author" content="Seiva Robotics & Technologies">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seivarobotics.com/">
+    <meta property="og:title" content="Seiva Robotics & Technologies | IoT & Robotics Training">
+    <meta property="og:description"
+        content="Transforming Ideas into Intelligent Technology Solutions. Hands-on training in Robotics, IoT, and Automation across India.">
+    <meta property="og:image" content="https://seivarobotics.com/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://seivarobotics.com/">
+    <meta property="twitter:title" content="Seiva Robotics & Technologies | IoT & Robotics Training">
+    <meta property="twitter:description"
+        content="Transforming Ideas into Intelligent Technology Solutions. Hands-on training in Robotics, IoT, and Automation across India.">
+    <meta property="twitter:image" content="https://seivarobotics.com/logo.png">
+
     <title>Seiva Robotics & Technologies | IoT & Robotics Training for Schools & Colleges</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://seivarobotics.com/">
 </head>
 
 <body>
@@ -134,15 +155,15 @@
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <div class="number" data-target="50">0+</div>
+                    <div class="number" data-target="5">0+</div>
                     <div class="label">Schools & Colleges</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="number" data-target="2000">0+</div>
+                    <div class="number" data-target="100">0+</div>
                     <div class="label">Students Trained</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="number" data-target="15">0+</div>
+                    <div class="number" data-target="6">0+</div>
                     <div class="label">Training Programs</div>
                 </div>
                 <div class="hero-stat">
@@ -389,8 +410,8 @@
                     Real-world robots and systems built by our team and trained students.
                 </p>
             </div>
-            <!-- Row 1 -->
             <div class="projects-grid">
+                <!-- Project 1 -->
                 <div class="project-card reveal">
                     <img src="robot1.jpg" alt="Welcome and serving robot">
                     <div class="project-overlay">
@@ -400,6 +421,7 @@
                             and serves food autonomously.</p>
                     </div>
                 </div>
+                <!-- Project 2 -->
                 <div class="project-card reveal">
                     <img src="robot2.jpg" alt="Welcome and serving robot variant">
                     <div class="project-overlay">
@@ -409,8 +431,9 @@
                             engagement.</p>
                     </div>
                 </div>
+                <!-- Project 3 -->
                 <div class="project-card reveal">
-                    <img src="robot3.jpg" alt="Mars rover prototype">
+                    <img src="robot3.jpg" alt="Mars rover prototype" class="no-crop">
                     <div class="project-overlay">
                         <span class="project-tag">Space Robotics</span>
                         <h3>Mars Rover Prototype</h3>
@@ -418,9 +441,7 @@
                             exploration simulations.</p>
                     </div>
                 </div>
-            </div>
-            <!-- Row 2 -->
-            <div class="projects-grid" style="margin-top: 24px;">
+                <!-- Project 4 -->
                 <div class="project-card reveal">
                     <img src="robot4.jpg" alt="Autonomous robot">
                     <div class="project-overlay">
@@ -430,6 +451,7 @@
                             environments and avoiding obstacles.</p>
                     </div>
                 </div>
+                <!-- Project 5 -->
                 <div class="project-card reveal">
                     <img src="robot5.jpg" alt="Autonomous robot advanced">
                     <div class="project-overlay">
@@ -439,15 +461,21 @@
                             applications.</p>
                     </div>
                 </div>
+                <!-- Video Project -->
                 <div class="project-card reveal">
-                    <video autoplay muted loop playsinline>
-                        <source src="project1.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-container">
+                        <video id="demoVideo" playsinline muted autoplay loop poster="robot1.jpg">
+                            <source src="project1.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn-overlay">
+                            <div class="play-icon">🔍</div>
+                        </div>
+                    </div>
                     <div class="project-overlay">
                         <span class="project-tag">🎥 Video Demo</span>
                         <h3>Welcome Robot in Action</h3>
-                        <p>Watch our welcome and serving robot in action — demonstrating autonomous guest interaction
-                            and food delivery.</p>
+                        <p>Click to watch our welcome and serving robot in action demonstrating autonomous interaction.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -818,6 +846,23 @@
             <span class="fab-tooltip">Call +91 93422 61511</span>
             📞
         </a>
+    </div>
+
+    <!-- ===== VIDEO MODAL POPUP ===== -->
+    <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="video-modal-backdrop"></div>
+        <div class="video-modal-content">
+            <button class="video-modal-close" id="modalClose" aria-label="Close modal">×</button>
+            <div class="video-modal-wrapper">
+                <video id="modalVideo" playsinline muted loop>
+                    <source src="project1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-modal-caption">
+                <h3>Welcome Robot in Action</h3>
+                <p>Live demonstration of our hospitality and serving robot.</p>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>

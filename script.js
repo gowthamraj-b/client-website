@@ -260,12 +260,14 @@ if (contactForm) {
         const institution = document.getElementById('institution').value;
         const message = document.getElementById('message').value;
 
-        const whatsappMsg = `Hello Seiva Robotics!%0A%0A` +
-            `*Name:* ${name}%0A` +
-            `*Email:* ${email}%0A` +
-            `*Phone:* ${phone}%0A` +
-            `*Institution:* ${institution}%0A` +
-            `*Message:* ${message}`;
+        const whatsappMsg = encodeURIComponent(
+            `Hello Seiva Robotics!\n\n` +
+            `*Name:* ${name}\n` +
+            `*Email:* ${email}\n` +
+            `*Phone:* ${phone}\n` +
+            `*Institution:* ${institution}\n` +
+            `*Message:* ${message}`
+        );
 
         window.open(`https://wa.me/919342261511?text=${whatsappMsg}`, '_blank');
 
@@ -298,17 +300,18 @@ if (internshipForm) {
         const iduration = document.getElementById('iduration').value;
         const imessage = document.getElementById('imessage').value;
 
-        const whatsappMsg =
-            `🎓 *Internship Application — Seiva Robotics & Technologies*%0A%0A` +
-            `*Name:* ${iname}%0A` +
-            `*Email:* ${iemail}%0A` +
-            `*Phone:* ${iphone}%0A` +
-            `*College:* ${icollege}%0A` +
-            `*Branch:* ${ibranch}%0A` +
-            `*Year:* ${iyear}%0A` +
-            `*Domain:* ${idomain}%0A` +
-            `*Duration:* ${iduration}%0A%0A` +
-            `*About Applicant:*%0A${imessage}`;
+        const whatsappMsg = encodeURIComponent(
+            `🎓 *Internship Application — Seiva Robotics & Technologies*\n\n` +
+            `*Name:* ${iname}\n` +
+            `*Email:* ${iemail}\n` +
+            `*Phone:* ${iphone}\n` +
+            `*College:* ${icollege}\n` +
+            `*Branch:* ${ibranch}\n` +
+            `*Year:* ${iyear}\n` +
+            `*Domain:* ${idomain}\n` +
+            `*Duration:* ${iduration}\n\n` +
+            `*About Applicant:* \n${imessage}`
+        );
 
         window.open(`https://wa.me/919342261511?text=${whatsappMsg}`, '_blank');
 
@@ -389,8 +392,52 @@ if (scrollIndicator) {
     window.addEventListener('scroll', onFirstScroll);
 }
 
+// ===== Video Playback & Modal =====
+function setupVideoPlayback() {
+    const demoVideo = document.getElementById('demoVideo');
+    const videoModal = document.getElementById('videoModal');
+    const modalVideo = document.getElementById('modalVideo');
+    const modalClose = document.getElementById('modalClose');
+    const modalBackdrop = document.querySelector('.video-modal-backdrop');
+
+    if (!demoVideo || !videoModal || !modalVideo) return;
+
+    const videoCard = demoVideo.closest('.project-card');
+
+    // Autoplay handling (browser often blocks with sound, but we are muted)
+    demoVideo.muted = true;
+    demoVideo.play().catch(e => console.log("Card video autoplay prevented:", e));
+
+    // Open Modal on card click
+    videoCard.addEventListener('click', () => {
+        videoModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        modalVideo.currentTime = demoVideo.currentTime; // Sync time
+        modalVideo.muted = true; // Ensure silent as requested
+        modalVideo.play();
+    });
+
+    // Close Modal
+    function closeModal() {
+        videoModal.classList.remove('open');
+        document.body.style.overflow = '';
+        modalVideo.pause();
+    }
+
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && videoModal.classList.contains('open')) {
+            closeModal();
+        }
+    });
+}
+
 // ===== Loading Animation =====
 window.addEventListener('load', () => {
+    setupVideoPlayback();
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.5s ease';
     requestAnimationFrame(() => {
